@@ -30,14 +30,13 @@ def first_fit():
     print("Percentage Usage : ")
     maax = max(M_ar, key=lambda M_ar: M_ar.used)
     while(True):
+        if u_c == maax.used+1:
+            break
         c = 0
         for x in M_ar:
             if u_c == x.used:
                 c+=1
         
-        if u_c == maax.used:
-            break
-
         percent = (c / len(M_ar))*100
         if percent == 0:
             percent = int(percent)
