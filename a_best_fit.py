@@ -37,7 +37,7 @@ def best_fit():
         for x in M_ar:
             if u_c == x.used:
                 c+=1
-                
+
         percent = (c / len(M_ar))*100
         if percent == 0:
             percent = int(percent)
@@ -68,7 +68,7 @@ def immidiate_simulation(J_ar, M_ar):
         if x.size > maax.size:
             J_ar.remove(x)
 
-    M_ar = sorted(M_ar, key=lambda M_ar: M_ar.size, reverse=True)
+    M_ar = sorted(M_ar, key=lambda M_ar: M_ar.size)
 
     #simulation
     while(len(J_ar) != 0):
